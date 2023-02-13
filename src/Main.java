@@ -27,7 +27,6 @@ public class Main {
                 System.out.println("Dit coordinaat is al eerder ingevoerd. Probeer opnieuw.");
             } else {
                 // 1c
-                guessedLocations[row][column] = 1;
 
                 // 1d
                 if (true) {
