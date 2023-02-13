@@ -23,6 +23,8 @@ public class Main {
             // 1b
             if (true) {
 
+            } else if (guessedLocations[row][column] == 1) {
+                System.out.println("Dit coordinaat is al eerder ingevoerd. Probeer opnieuw.");
             } else {
                 // 1c
                 guessedLocations[row][column] = 1;
@@ -60,10 +62,10 @@ public class Main {
         System.out.println("   ---------");
 
         // 2a
-        for (int column = 0; column < 1; column++) {
+        for (int row = 0; row < 1; row++) {
             // 2b
 
-            for (int row = 0; row < 1; row++) {
+            for (int column = 0; column < 1; column++) {
                 // 2c
                 if (true) {
                     if (true) {
