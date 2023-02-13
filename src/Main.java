@@ -12,38 +12,33 @@ public class Main {
         System.out.println("Succes!");
         displayBoard();
 
-        while (totalShips > 0 && livesLeft > 0) {
-            Scanner sc = new Scanner(System.in);
+        // 1a
+        while (true) {
+            Scanner consoleInput = new Scanner(System.in);
             System.out.println("Voer een rijnummer in: ");
-            int row = sc.nextInt() - 1;
+            int row = consoleInput.nextInt() - 1;
             System.out.println("Voer een kolomnummer in:");
-            int column = sc.nextInt() - 1;
+            int column = consoleInput.nextInt() - 1;
 
-            if (row < 0 || row >= 5 || column < 0 || column >= 5) {
-                System.out.println("Ongeldige coordinaten. Voer een coordinaat tussen de 1 en de 5 in.");
-            } else if (guessedLocations[row][column] == 1) {
-                System.out.println("Dit coordinaat is al eerder ingevoerd. Probeer opnieuw.");
+            // 1b
+            if (true) {
+
             } else {
-                System.out.println();
+                // 1c
                 guessedLocations[row][column] = 1;
 
-                if (board[row][column] == 1) {
-                    totalShips--;
-                    System.out.println("Je hebt een schip gezonken! Er zijn nog " + totalShips + " schepen over.");
+                // 1d
+                if (true) {
+
                 } else {
-                    System.out.println("Mis... :(");
-                    livesLeft--;
+
                 }
             }
 
-            displayBoard();
+
         }
 
-        if (totalShips == 0) {
-            System.out.println("Gefeliciteerd, je hebt gewonnen!");
-        } else if (livesLeft == 0) {
-            System.out.println("Helaas, je hebt verloren!");
-        }
+        // 1e
     }
 
     public static void initializeBoard() {
@@ -64,18 +59,20 @@ public class Main {
         System.out.println("   1 2 3 4 5");
         System.out.println("   ---------");
 
-        for (int i = 0; i < 5; i++) {
-            System.out.print((i + 1) + " |");
+        // 2a
+        for (int column = 0; column < 1; column++) {
+            // 2b
 
-            for (int j = 0; j < 5; j++) {
-                if (guessedLocations[i][j] == 1) {
-                    if (board[i][j] == 1) {
-                        System.out.print("X ");
+            for (int row = 0; row < 1; row++) {
+                // 2c
+                if (true) {
+                    if (true) {
+
                     } else {
-                        System.out.print("  ");
+
                     }
                 } else {
-                    System.out.print("# ");
+
                 }
             }
             System.out.println();
