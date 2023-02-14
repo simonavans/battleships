@@ -12,7 +12,7 @@ public class Main {
         System.out.println("Succes!");
         displayBoard();
 
-        // 1a
+        // todo 1a
         while (true) {
             Scanner consoleInput = new Scanner(System.in);
             System.out.println("Voer een rijnummer in: ");
@@ -20,15 +20,15 @@ public class Main {
             System.out.println("Voer een kolomnummer in:");
             int column = consoleInput.nextInt() - 1;
 
-            // 1b
+            // todo 1b
             if (true) {
 
             } else if (guessedLocations[row][column] == 1) {
                 System.out.println("Dit coordinaat is al eerder ingevoerd. Probeer opnieuw.");
             } else {
-                // 1c
+                // todo 1c
 
-                // 1d
+                // todo 1d
                 if (true) {
 
                 } else {
@@ -39,7 +39,7 @@ public class Main {
 
         }
 
-        // 1e
+        // todo 1e
     }
 
     public static void initializeBoard() {
@@ -60,12 +60,12 @@ public class Main {
         System.out.println("   1 2 3 4 5");
         System.out.println("   ---------");
 
-        // 2a
+        // todo 2a
         for (int row = 0; row < 1; row++) {
-            // 2b
+            // todo 2b
 
             for (int column = 0; column < 1; column++) {
-                // 2c
+                // todo 2c
                 if (true) {
                     if (true) {
 
