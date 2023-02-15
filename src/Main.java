@@ -11,13 +11,14 @@ public class Main {
         System.out.println("Welkom bij zeeslag! Om te winnen moet je " + totalShips + " schepen raken.");
         System.out.println("Succes!");
         displayBoard();
+        System.out.println("X = geraakt; Leeg = mis; # = niet geraden.");
 
         while (totalShips > 0 && livesLeft > 0) {
-            Scanner sc = new Scanner(System.in);
+            Scanner input = new Scanner(System.in);
             System.out.println("Voer een rijnummer in: ");
-            int row = sc.nextInt() - 1;
+            int row = input.nextInt() - 1;
             System.out.println("Voer een kolomnummer in:");
-            int column = sc.nextInt() - 1;
+            int column = input.nextInt() - 1;
 
             if (row < 0 || row >= 5 || column < 0 || column >= 5) {
                 System.out.println("Ongeldige coordinaten. Voer een coordinaat tussen de 1 en de 5 in.");
@@ -46,7 +47,7 @@ public class Main {
         }
     }
 
-    public static void initializeBoard() {
+    static void initializeBoard() {
         int shipsPlaced = 0;
 
         while (shipsPlaced < totalShips) {
@@ -60,16 +61,20 @@ public class Main {
         }
     }
 
-    public static void displayBoard() {
+    static void displayBoard() {
         System.out.println("   1 2 3 4 5");
         System.out.println("   ---------");
 
-        for (int i = 0; i < 5; i++) {
-            System.out.print((i + 1) + " |");
+        int rowCounter = 0;
 
-            for (int j = 0; j < 5; j++) {
-                if (guessedLocations[i][j] == 1) {
-                    if (board[i][j] == 1) {
+        while (rowCounter < 5) {
+            int columnCounter = 0;
+
+            System.out.print((rowCounter + 1) + " |");
+
+            while (columnCounter < 5) {
+                if (guessedLocations[rowCounter][columnCounter] == 1) {
+                    if (board[rowCounter][columnCounter] == 1) {
                         System.out.print("X ");
                     } else {
                         System.out.print("  ");
@@ -77,10 +82,14 @@ public class Main {
                 } else {
                     System.out.print("# ");
                 }
+
+                columnCounter = columnCounter + 1;
             }
+
             System.out.println();
+
+            rowCounter = rowCounter + 1;
         }
-        System.out.println("X = geraakt; Leeg = mis; # = niet geraden.");
         System.out.println("Levens over: " + livesLeft);
         System.out.println();
     }
