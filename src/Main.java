@@ -11,14 +11,15 @@ public class Main {
         System.out.println("Welkom bij zeeslag! Om te winnen moet je " + totalShips + " schepen raken.");
         System.out.println("Succes!");
         displayBoard();
+        System.out.println("X = geraakt; Leeg = mis; # = niet geraden.");
 
         // todo 1a
         while (true) {
-            Scanner consoleInput = new Scanner(System.in);
+            Scanner input = new Scanner(System.in);
             System.out.println("Voer een rijnummer in: ");
-            int row = consoleInput.nextInt() - 1;
+            int row = input.nextInt() - 1;
             System.out.println("Voer een kolomnummer in:");
-            int column = consoleInput.nextInt() - 1;
+            int column = input.nextInt() - 1;
 
             // todo 1b
             if (true) {
@@ -26,6 +27,7 @@ public class Main {
             } else if (guessedLocations[row][column] == 1) {
                 System.out.println("Dit coordinaat is al eerder ingevoerd. Probeer opnieuw.");
             } else {
+                System.out.println();
                 // todo 1c
 
                 // todo 1d
@@ -36,7 +38,7 @@ public class Main {
                 }
             }
 
-
+            // todo 2e
         }
 
         // todo 1e
@@ -60,11 +62,15 @@ public class Main {
         System.out.println("   1 2 3 4 5");
         System.out.println("   ---------");
 
+        int rowCounter = 0;
+
         // todo 2a
-        for (int row = 0; row < 1; row++) {
+        while (rowCounter < 1) {
+            int columnCounter = 0;
+
             // todo 2b
 
-            for (int column = 0; column < 1; column++) {
+            while (columnCounter < 1) {
                 // todo 2c
                 if (true) {
                     if (true) {
@@ -75,10 +81,13 @@ public class Main {
                 } else {
 
                 }
+
+                columnCounter = columnCounter + 1;
             }
             System.out.println();
+            
+            rowCounter = rowCounter + 1;
         }
-        System.out.println("X = geraakt; Leeg = mis; # = niet geraden.");
         System.out.println("Levens over: " + livesLeft);
         System.out.println();
     }
